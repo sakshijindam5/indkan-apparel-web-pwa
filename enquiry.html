@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquiry List | INDKAN World Wide Exim Pvt. Ltd.</title>
+  <meta name="description" content="Review your selected Indian apparel products, specify order quantities, and submit your wholesale export enquiry to INDKAN World Wide Exim." />
+  <meta name="author" content="Sakshi Jindam" />
+  
+  <!-- PWA & Mobile Settings -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1b365d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="INDKAN" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top contact bar for quick communication -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>Location: New Town, Kolkata, West Bengal, India</span>
+        <span>Phone: +91 98300 76543 / +91 33 4012 8899</span>
+        <span>Email: info@indkanworldwideexim.in</span>
+      </div>
+      <div class="top-bar-right">
+        <button type="button" class="topbar-install-btn trigger-pwa-install" id="topbarInstallBtn">📲 Install App</button>
+        <a href="wholesale.html">Request a Wholesale Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with logo and navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" title="INDKAN World Wide Exim Pvt. Ltd.">
+          <img src="assets/img/indkan-logo.svg" alt="INDKAN World Wide Exim Pvt. Ltd. Logo" onerror="this.src='assets/img/final_logo.png'" />
+        </a>
+
+        <!-- Hamburger toggle for mobile -->
+        <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="enquiry.html" class="active">Enquiry List <span class="badge" id="navEnquiryBadge">0</span></a></li>
+          <li><a href="wholesale.html">Wholesale &amp; Bulk</a></li>
+          <li><a href="export-info.html">Export Info</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button type="button" class="nav-install-btn trigger-pwa-install" id="navInstallBtn">📲 Install App</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PWA Install Banner -->
+  <div class="pwa-install-banner" id="pwaInstallBanner">
+    <div class="container pwa-banner-content">
+      <div class="pwa-banner-text">
+        <img src="assets/icons/icon-192.png" alt="INDKAN App" class="pwa-banner-icon" />
+        <div>
+          <strong>Install INDKAN Apparel App</strong>
+          <p>Instant access to apparel catalogue and offline wholesale enquiry list.</p>
+        </div>
+      </div>
+      <div class="pwa-banner-actions">
+        <button type="button" class="btn btn-primary btn-sm" id="btnInstallPwa">Install App</button>
+        <button type="button" class="btn-dismiss" id="btnDismissPwa" aria-label="Dismiss">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS PWA Install Hint -->
+  <div class="ios-install-hint" id="iosInstallHint" style="display: none;">
+    <span>Tap <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> <strong>Share</strong> then <strong>'Add to Home Screen'</strong> to install app.</span>
+    <button type="button" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-title-banner">
+    <div class="container">
+      <h1>Your Wholesale Enquiry List</h1>
+      <p>Review your selected garments, adjust order quantities, and request export pricing from our Kolkata office.</p>
+    </div>
+  </section>
+
+  <!-- Main Enquiry Content -->
+  <main class="container page-content">
+
+    <!-- Container for success confirmation screen -->
+    <div id="enquirySuccessBox" class="alert-success-box" style="display: none;">
+      <div class="success-icon">&#10003;</div>
+      <h2>Enquiry Submitted Successfully!</h2>
+      <p id="successRefText">Your enquiry reference is <strong>IND-EXIM-2026-0814</strong>.</p>
+      <p>Thank you for your interest in INDKAN apparel exports. Our international trade executive from New Town, Kolkata will review your product selection and send an official FOB/CIF proforma quotation within <strong>24 business hours</strong>.</p>
+      <div class="success-actions">
+        <a href="catalogue.html" class="btn btn-primary">Browse More Products</a>
+        <a href="index.html" class="btn btn-secondary">Return to Home</a>
+      </div>
+    </div>
+
+    <!-- Active enquiry container -->
+    <div id="enquiryActiveSection">
+      
+      <!-- Empty state when no products have been added yet -->
+      <div id="enquiryEmptyState" class="empty-state" style="display: none;">
+        <div class="empty-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1b365d" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+        </div>
+        <h3>Your Enquiry List is Currently Empty</h3>
+        <p>You haven't added any apparel items to your enquiry list yet. Browse our export catalogue of Men's Wear, Women's Wear, and Traditional Indian garments to select products.</p>
+        <a href="catalogue.html" class="btn btn-primary" style="margin-top: 15px;">Explore Catalogue &rarr;</a>
+      </div>
+
+      <!-- Main Layout: Product List on Left, Enquiry Form on Right -->
+      <div id="enquiryLayout" class="enquiry-two-col" style="display: none;">
+        
+        <!-- Left: Selected Items List -->
+        <div class="enquiry-items-col">
+          <div class="card-box">
+            <div class="box-header-row">
+              <h2>Selected Garments (<span id="enquiryTotalItemsCount">0</span>)</h2>
+              <button type="button" class="btn-text-danger" id="btnClearEnquiryList">Clear All</button>
+            </div>
+
+            <!-- List rendered dynamically by js/main.js -->
+            <div id="enquiryItemsContainer" class="enquiry-items-list">
+              <!-- Item rows populated here -->
+            </div>
+
+            <!-- Summary metrics -->
+            <div class="enquiry-metrics-bar">
+              <div class="metric-item">
+                <span class="metric-label">Total Selected Items</span>
+                <span class="metric-val" id="summaryTotalItems">0</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-label">Estimated Total Pieces</span>
+                <span class="metric-val" id="summaryTotalPieces">0 pcs</span>
+              </div>
+            </div>
+            
+            <p class="moq-note">
+              <small>ℹ️ Note: Minimum order quantities (MOQ) apply per design for export production and sea/air freight consolidation.</small>
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Commercial Enquiry Form -->
+        <div class="enquiry-form-col">
+          <div class="card-box">
+            <h2>Commercial Enquiry Details</h2>
+            <p class="form-subtext">Please provide your business and destination port details so we can calculate FOB/CIF pricing.</p>
+
+            <form id="enquiryForm" novalidate>
+              <div class="form-group">
+                <label for="contactName">Your Full Name <span class="required">*</span></label>
+                <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Robert Smith / Amit Sharma" required />
+                <span class="error-msg" id="errName"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="companyName">Company / Business Name <span class="required">*</span></label>
+                  <input type="text" id="companyName" name="company" class="form-control" placeholder="e.g. Apex Retail Inc." required />
+                  <span class="error-msg" id="errCompany"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="country">Destination Country <span class="required">*</span></label>
+                  <input type="text" id="country" name="country" class="form-control" placeholder="e.g. United States, UK, UAE, Germany" required />
+                  <span class="error-msg" id="errCountry"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Business Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="name@company.com" required />
+                  <span class="error-msg" id="errEmail"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone / WhatsApp (+Country Code) <span class="required">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="+1 555 123 4567 or +91 98300..." required />
+                  <span class="error-msg" id="errPhone"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Custom Requirements / Notes <span class="optional">(Optional)</span></label>
+                <textarea id="message" name="message" rows="4" class="form-control" placeholder="Mention preferred packaging, private labeling tags, target dispatch month, or customs requirements..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" id="btnSubmitEnquiry">
+                Submit Wholesale Enquiry &rarr;
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Floating WhatsApp button for instant buyer inquiries -->
+  <a href="https://wa.me/919830076543?text=Hello%20INDKAN%20Exim,%20I%20have%20an%20enquiry%20regarding%20apparel%20export." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat with INDKAN on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.12c-1.5 0-2.97-.4-4.24-1.16l-.3-.18-3.14.82.84-3.06-.2-.32a8.09 8.09 0 0 1-1.24-4.41c0-4.47 3.64-8.11 8.12-8.11 2.17 0 4.21.85 5.75 2.38 1.53 1.54 2.38 3.58 2.38 5.75 0 4.48-3.65 8.12-8.11 8.12zm4.45-6.09c-.24-.12-1.44-.71-1.66-.79-.22-.09-.39-.12-.55.12-.17.24-.65.79-.8 1.03-.15.24-.3.27-.54.15-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.15-.24-.02-.37.1-.49.11-.11.25-.28.37-.43.12-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.55-1.33-.76-1.83-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.24-.87.85-.87 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.21-.57.21-1.06.15-1.16-.06-.1-.22-.17-.46-.29z"/>
+    </svg>
+  </a>
+
+  <!-- Fixed Mobile Bottom Navigation Bar (Screens < 768px) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="catalogue.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      <span>Catalogue</span>
+    </a>
+    <a href="enquiry.html" class="nav-tab active">
+      <div class="tab-icon-wrap">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="tab-badge" id="bottomEnquiryBadge">0</span>
+      </div>
+      <span>Enquiry</span>
+    </a>
+    <a href="export-info.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span>Info</span>
+    </a>
+    <a href="contact.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Premium Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Credentials -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand">
+            <img src="assets/img/indkan-logo.svg" alt="INDKAN Logo" onerror="this.src='assets/img/final_logo.png'" class="footer-logo" />
+            <span class="footer-brand-title">INDKAN World Wide Exim</span>
+          </div>
+          <p class="footer-tagline">
+            Government of India DGFT IEC Approved manufacturer &amp; bulk exporter of premium Indian apparel, cotton, linen, and traditional handlooms.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">&#10003; DGFT IEC Registered</span>
+            <span class="footer-badge">&#10003; Sea Port: Kolkata (INCCU1)</span>
+            <span class="footer-badge">&#10003; Worldwide B2B Shipping</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Garment Catalogue</a></li>
+            <li><a href="enquiry.html">Enquiry Cart</a></li>
+            <li><a href="wholesale.html">Bulk Wholesale RFQ</a></li>
+            <li><a href="export-info.html">Export Procedure &amp; FAQs</a></li>
+            <li><a href="about.html">About INDKAN Exim</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Apparel Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Apparel Categories</h4>
+          <ul class="footer-nav">
+            <li><a href="catalogue.html?cat=men">Men's Wear &amp; Kurtas</a></li>
+            <li><a href="catalogue.html?cat=women">Women's Ethnic &amp; Tunics</a></li>
+            <li><a href="catalogue.html?cat=traditional">Traditional Banarasi &amp; Silk</a></li>
+            <li><a href="wholesale.html">Custom OEM Tailoring</a></li>
+            <li><button type="button" class="footer-install-btn trigger-pwa-install">📲 Install INDKAN App</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate Contact & Connect -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Headquarters</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon">&#128205;</span>
+              <span>Action Area II, New Town, Kolkata, West Bengal - 700161, India</span>
+            </li>
+            <li>
+              <span class="contact-icon">&#128222;</span>
+              <span><a href="tel:+919830076543">+91 98300 76543</a> / <a href="tel:+913340128899">+91 33 4012 8899</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9993;</span>
+              <span><a href="mailto:info@indkanworldwideexim.in">info@indkanworldwideexim.in</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9200;</span>
+              <span>Mon – Sat: 9:30 AM – 6:30 PM IST</span>
+            </li>
+          </ul>
+          <div class="footer-social-wrap">
+            <span class="social-label">Follow INDKAN:</span>
+            <div class="footer-social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+              <a href="https://instagram.com/indkankolkata" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+              <a href="https://youtube.com/@indkanworldwideeximkolkata" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+              <a href="https://wa.me/919830076543" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="wa-link">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright-text">
+            &copy; 2026 <strong>INDKAN World Wide Exim Pvt. Ltd.</strong> All rights reserved. &bull; Registered in Kolkata, India.
+          </p>
+          <p class="developer-text">
+            Crafted &amp; Developed by <strong>Sakshi Jindam</strong> &bull; Web Developer
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

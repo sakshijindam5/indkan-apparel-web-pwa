@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Export Information &amp; Shipping Process | INDKAN World Wide Exim Pvt. Ltd.</title>
+  <meta name="description" content="Learn about our 7-step apparel export process, destination countries, payment terms, export documentation, and FAQs." />
+  <meta name="author" content="Sakshi Jindam" />
+  <!-- PWA & Mobile Settings -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1b365d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="INDKAN" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top contact bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>Location: New Town, Kolkata, West Bengal, India</span>
+        <span>Phone: +91 98300 76543 / +91 33 4012 8899</span>
+        <span>Email: info@indkanworldwideexim.in</span>
+      </div>
+      <div class="top-bar-right">
+        <button type="button" class="topbar-install-btn trigger-pwa-install" id="topbarInstallBtn">📲 Install App</button>
+        <a href="wholesale.html">Request a Wholesale Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with logo and navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" title="INDKAN World Wide Exim Pvt. Ltd.">
+          <img src="assets/img/indkan-logo.svg" alt="INDKAN World Wide Exim Pvt. Ltd. Logo" onerror="this.src='assets/img/final_logo.png'" />
+        </a>
+
+        <!-- Hamburger toggle for mobile -->
+        <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="enquiry.html">Enquiry List <span class="badge" id="navEnquiryBadge">0</span></a></li>
+          <li><a href="wholesale.html">Wholesale &amp; Bulk</a></li>
+          <li><a href="export-info.html" class="active">Export Info</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button type="button" class="nav-install-btn trigger-pwa-install" id="navInstallBtn">📲 Install App</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PWA Install Banner -->
+  <div class="pwa-install-banner" id="pwaInstallBanner">
+    <div class="container pwa-banner-content">
+      <div class="pwa-banner-text">
+        <img src="assets/icons/icon-192.png" alt="INDKAN App" class="pwa-banner-icon" />
+        <div>
+          <strong>Install INDKAN Apparel App</strong>
+          <p>Instant access to garment catalogue &amp; offline wholesale enquiry list.</p>
+        </div>
+      </div>
+      <div class="pwa-banner-actions">
+        <button type="button" class="btn btn-primary btn-sm" id="btnInstallPwa">Install App</button>
+        <button type="button" class="btn-dismiss" id="btnDismissPwa" aria-label="Dismiss">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS PWA Install Hint -->
+  <div class="ios-install-hint" id="iosInstallHint" style="display: none;">
+    <span>Tap <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> <strong>Share</strong> then <strong>'Add to Home Screen'</strong> to install app.</span>
+    <button type="button" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+
+  <!-- Page banner -->
+  <section class="banner">
+    <div class="container">
+      <h1>Export Information &amp; Shipping</h1>
+      <p>
+        We make international apparel procurement straightforward and transparent. Below is our step-by-step export workflow, global destinations, payment options, and essential customs documentation.
+      </p>
+    </div>
+  </section>
+
+  <!-- 1. Step-by-Step Export Process -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our 7-Step Export Process</h2>
+        <p>From your initial inquiry to final port delivery, here is how an order works</p>
+      </div>
+
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Enquiry &amp; Quotation</h4>
+            <p>You send your product requirements, target quantities, and destination port. We provide a detailed proforma quotation in Indian Rupees (₹) with FOB Kolkata or CIF rates.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Sample Approval</h4>
+            <p>We dispatch fabric swatches and pre-production counter-samples by international courier (DHL/FedEx) for your fit, color, and fabric verification.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Order Confirmation</h4>
+            <p>Once you approve the sample, a formal purchase contract is signed. The buyer opens an Irrevocable Letter of Credit (L/C) or remits the agreed 30% advance deposit.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Production &amp; Stitching</h4>
+            <p>Bulk production begins at our partner manufacturing facilities. Fabric is woven, dyed, cut, stitched, and finished as per the signed tech-pack specifications.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h4>Quality Check &amp; Packing</h4>
+            <p>Each garment is individually checked for stitch tension, measurements, and finishing. Garments are polybagged with barcode tags and packed into 7-ply export cartons.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <h4>Customs Clearance &amp; Shipping</h4>
+            <p>Goods are moved to Syama Prasad Mookerjee Port, Kolkata (or Kolkata Air Cargo). Indian export customs clearance is processed and cartons are loaded into container vessels.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">7</div>
+          <div class="step-content">
+            <h4>Delivery &amp; Documents Handover</h4>
+            <p>Shipping Bill of Lading (BL), invoice, and Certificate of Origin are released through the banking channel or courier, enabling smooth clearance at your local port.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Countries We Ship To & Payment Terms -->
+  <section class="section section-grey">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px;">
+        <!-- Countries We Ship To -->
+        <div style="background-color: #ffffff; border: 1px solid #e2e5e8; border-radius: 4px; padding: 25px;">
+          <h3 style="color: #1b365d; font-size: 20px; margin-bottom: 12px;">Countries We Ship To</h3>
+          <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+            We regularly ship commercial apparel consignments to international buyers across:
+          </p>
+          <ul style="padding-left: 20px; font-size: 14px; color: #444; line-height: 1.8;">
+            <li><strong>North America:</strong> United States, Canada</li>
+            <li><strong>Europe &amp; UK:</strong> United Kingdom, Germany, France, Netherlands, Italy, Spain</li>
+            <li><strong>Middle East &amp; GCC:</strong> United Arab Emirates (Dubai, Jebel Ali), Saudi Arabia, Oman</li>
+            <li><strong>Asia-Pacific:</strong> Australia, New Zealand, Singapore, Malaysia</li>
+            <li><strong>Africa:</strong> South Africa, Kenya, Mauritius</li>
+          </ul>
+        </div>
+
+        <!-- Payment Terms -->
+        <div style="background-color: #ffffff; border: 1px solid #e2e5e8; border-radius: 4px; padding: 25px;">
+          <h3 style="color: #1b365d; font-size: 20px; margin-bottom: 12px;">Payment Terms</h3>
+          <p style="font-size: 14px; color: #666; margin-bottom: 15px;">
+            To ensure complete safety and compliance under Indian foreign exchange (RBI) rules:
+          </p>
+          <ul style="padding-left: 20px; font-size: 14px; color: #444; line-height: 1.8;">
+            <li><strong>Letter of Credit (L/C):</strong> 100% Irrevocable Letter of Credit at sight through prime international banks.</li>
+            <li><strong>Telegraphic Transfer (T/T):</strong> 30% advance on order confirmation, balance 70% payable against scanned copy of shipping Bill of Lading.</li>
+            <li><strong>Currency:</strong> Quoted in Indian Rupees (₹) with USD / EUR / GBP exchange conversions on proforma invoices.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Documents Provided -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Export Documents Provided</h2>
+        <p>Complete paperwork provided with every commercial shipment</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+        <div style="border: 1px solid #e2e5e8; border-radius: 4px; padding: 20px; text-align: center; background-color: #ffffff;">
+          <h4 style="color: #1b365d; margin-bottom: 6px;">DGFT IEC</h4>
+          <p style="font-size: 13px; color: #666;">Importer-Exporter Code issued by Ministry of Commerce, Govt. of India.</p>
+        </div>
+
+        <div style="border: 1px solid #e2e5e8; border-radius: 4px; padding: 20px; text-align: center; background-color: #ffffff;">
+          <h4 style="color: #1b365d; margin-bottom: 6px;">GST Export Invoice</h4>
+          <p style="font-size: 13px; color: #666;">Official tax invoice with itemized HS codes, unit prices, and quantities.</p>
+        </div>
+
+        <div style="border: 1px solid #e2e5e8; border-radius: 4px; padding: 20px; text-align: center; background-color: #ffffff;">
+          <h4 style="color: #1b365d; margin-bottom: 6px;">Packing List</h4>
+          <p style="font-size: 13px; color: #666;">Gross and net weights, carton count, and itemized piece breakdown per box.</p>
+        </div>
+
+        <div style="border: 1px solid #e2e5e8; border-radius: 4px; padding: 20px; text-align: center; background-color: #ffffff;">
+          <h4 style="color: #1b365d; margin-bottom: 6px;">Certificate of Origin</h4>
+          <p style="font-size: 13px; color: #666;">Issued by the authorized Indian Chamber of Commerce for preferential customs duties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Frequently Asked Questions (5 FAQs) -->
+  <section class="section section-grey">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Frequently Asked Questions</h2>
+        <p>Click on any question to view the answer</p>
+      </div>
+
+      <div class="faq-list">
+        <!-- FAQ 1 -->
+        <div class="faq-card open">
+          <button class="faq-question" type="button">
+            <span>What is your typical Minimum Order Quantity (MOQ)?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Our standard MOQ ranges from 25 to 50 pieces for traditional sarees and wedding wear, and 50 to 100 pieces for shirts, kurtas, and kurtis. For custom dye colors or special weave patterns, the MOQ is usually 150 to 200 pieces per style.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-card">
+          <button class="faq-question" type="button">
+            <span>Can we order physical samples before placing a bulk container order?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. We encourage buyers to evaluate physical samples. We provide fabric swatches and finished counter-samples via DHL, FedEx, or Aramex within 5 to 7 business days. Sample costs are deductible from your final bulk purchase order.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-card">
+          <button class="faq-question" type="button">
+            <span>How long does shipping take from Kolkata to overseas ports?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Sea freight from Syama Prasad Mookerjee Port (Kolkata) takes approximately 12 to 16 days to Dubai/Jebel Ali, 22 to 28 days to Western Europe/UK, and 28 to 35 days to USA East Coast ports. Air shipments via Kolkata International Airport take 4 to 6 business days worldwide.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-card">
+          <button class="faq-question" type="button">
+            <span>Do you offer private brand labeling and custom packaging?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. We can stitch your brand woven labels, attach your retail hangtags with barcode stickers, and pack products in customized printed polybags or presentation gift boxes as per your brand instructions.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-card">
+          <button class="faq-question" type="button">
+            <span>Are your garments pre-shrunk and color-fast?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Our cotton and linen fabrics undergo mill-level pre-washing and enzyme softening to ensure shrinkage remains strictly within commercial tolerance (under 3%). We use certified azo-free dyes with good color-fastness ratings for export.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Credentials -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand">
+            <img src="assets/img/indkan-logo.svg" alt="INDKAN Logo" onerror="this.src='assets/img/final_logo.png'" class="footer-logo" />
+            <span class="footer-brand-title">INDKAN World Wide Exim</span>
+          </div>
+          <p class="footer-tagline">
+            Government of India DGFT IEC Approved manufacturer &amp; bulk exporter of premium Indian apparel, cotton, linen, and traditional handlooms.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">&#10003; DGFT IEC Registered</span>
+            <span class="footer-badge">&#10003; Sea Port: Kolkata (INCCU1)</span>
+            <span class="footer-badge">&#10003; Worldwide B2B Shipping</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Garment Catalogue</a></li>
+            <li><a href="enquiry.html">Enquiry Cart</a></li>
+            <li><a href="wholesale.html">Bulk Wholesale RFQ</a></li>
+            <li><a href="export-info.html">Export Procedure &amp; FAQs</a></li>
+            <li><a href="about.html">About INDKAN Exim</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Apparel Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Apparel Categories</h4>
+          <ul class="footer-nav">
+            <li><a href="catalogue.html?cat=men">Men's Wear &amp; Kurtas</a></li>
+            <li><a href="catalogue.html?cat=women">Women's Ethnic &amp; Tunics</a></li>
+            <li><a href="catalogue.html?cat=traditional">Traditional Banarasi &amp; Silk</a></li>
+            <li><a href="wholesale.html">Custom OEM Tailoring</a></li>
+            <li><button type="button" class="footer-install-btn trigger-pwa-install">📲 Install INDKAN App</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate Contact & Connect -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Headquarters</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon">&#128205;</span>
+              <span>Action Area II, New Town, Kolkata, West Bengal - 700161, India</span>
+            </li>
+            <li>
+              <span class="contact-icon">&#128222;</span>
+              <span><a href="tel:+919830076543">+91 98300 76543</a> / <a href="tel:+913340128899">+91 33 4012 8899</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9993;</span>
+              <span><a href="mailto:info@indkanworldwideexim.in">info@indkanworldwideexim.in</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9200;</span>
+              <span>Mon – Sat: 9:30 AM – 6:30 PM IST</span>
+            </li>
+          </ul>
+          <div class="footer-social-wrap">
+            <span class="social-label">Follow INDKAN:</span>
+            <div class="footer-social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+              <a href="https://instagram.com/indkankolkata" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+              <a href="https://youtube.com/@indkanworldwideeximkolkata" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+              <a href="https://wa.me/919830076543" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="wa-link">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright-text">
+            &copy; 2026 <strong>INDKAN World Wide Exim Pvt. Ltd.</strong> All rights reserved. &bull; Registered in Kolkata, India.
+          </p>
+          <p class="developer-text">
+            Crafted &amp; Developed by <strong>Sakshi Jindam</strong> &bull; Web Developer
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/919830076543?text=Hello%20INDKAN%20Exim,%20I%20have%20an%20export%20question." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+  </a>
+
+  <!-- Fixed Mobile Bottom Navigation Bar (Screens < 768px) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="catalogue.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      <span>Catalogue</span>
+    </a>
+    <a href="enquiry.html" class="nav-tab">
+      <div class="tab-icon-wrap">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="tab-badge" id="bottomEnquiryBadge">0</span>
+      </div>
+      <span>Enquiry</span>
+    </a>
+    <a href="export-info.html" class="nav-tab active">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span>Info</span>
+    </a>
+    <a href="contact.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

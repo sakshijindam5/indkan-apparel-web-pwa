@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INDKAN World Wide Exim Pvt. Ltd. | Clothing &amp; Apparel Exports</title>
+  <meta name="description" content="INDKAN World Wide Exim Pvt. Ltd. - Manufacturer and exporter of quality Indian clothing and apparel based in New Town, Kolkata, India." />
+  <meta name="author" content="Sakshi Jindam" />
+  <!-- PWA & Mobile Settings -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1b365d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="INDKAN" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top contact bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>Location: New Town, Kolkata, West Bengal, India</span>
+        <span>Phone: +91 98300 76543 / +91 33 4012 8899</span>
+        <span>Email: info@indkanworldwideexim.in</span>
+      </div>
+      <div class="top-bar-right">
+        <button type="button" class="topbar-install-btn trigger-pwa-install" id="topbarInstallBtn">📲 Install App</button>
+        <a href="wholesale.html">Request a Wholesale Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with logo and navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" title="INDKAN World Wide Exim Pvt. Ltd.">
+          <img src="assets/img/indkan-logo.svg" alt="INDKAN World Wide Exim Pvt. Ltd. Logo" onerror="this.src='assets/img/final_logo.png'" />
+        </a>
+
+        <!-- Hamburger toggle for mobile -->
+        <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="enquiry.html">Enquiry List <span class="badge" id="navEnquiryBadge">0</span></a></li>
+          <li><a href="wholesale.html">Wholesale &amp; Bulk</a></li>
+          <li><a href="export-info.html">Export Info</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button type="button" class="nav-install-btn trigger-pwa-install" id="navInstallBtn">📲 Install App</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PWA Install Banner -->
+  <div class="pwa-install-banner" id="pwaInstallBanner">
+    <div class="container pwa-banner-content">
+      <div class="pwa-banner-text">
+        <img src="assets/icons/icon-192.png" alt="INDKAN App" class="pwa-banner-icon" />
+        <div>
+          <strong>Install INDKAN Apparel App</strong>
+          <p>Instant access to garment catalogue &amp; offline wholesale enquiry list.</p>
+        </div>
+      </div>
+      <div class="pwa-banner-actions">
+        <button type="button" class="btn btn-primary btn-sm" id="btnInstallPwa">Install App</button>
+        <button type="button" class="btn-dismiss" id="btnDismissPwa" aria-label="Dismiss">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS PWA Install Hint -->
+  <div class="ios-install-hint" id="iosInstallHint" style="display: none;">
+    <span>Tap <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> <strong>Share</strong> then <strong>'Add to Home Screen'</strong> to install app.</span>
+    <button type="button" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+
+  <!-- Main hero banner -->
+  <section class="banner">
+    <div class="container">
+      <h1>Quality Indian Apparel for Global Markets</h1>
+      <p>
+        INDKAN World Wide Exim Pvt. Ltd. is an Indian apparel export company based in New Town, Kolkata. We supply quality men's wear, women's fashion, and authentic traditional wear to retail stores, wholesalers, and importers worldwide.
+      </p>
+      <div class="banner-buttons">
+        <a href="catalogue.html" class="btn btn-primary">View Catalogue</a>
+        <a href="wholesale.html" class="btn btn-outline">Wholesale Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 Category Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Apparel Categories</h2>
+        <p>Explore our major export collections manufactured for bulk orders</p>
+      </div>
+
+      <div class="category-grid">
+        <!-- Men's Wear -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80" alt="Men's Wear Collection" />
+          <div class="category-card-body">
+            <h3>Men's Wear</h3>
+            <p>Pure cotton kurtas, linen casual shirts, Nehru jackets, denim wear, and tailored suits.</p>
+            <a href="catalogue.html?cat=men" class="btn btn-primary">View Men's Wear</a>
+          </div>
+        </div>
+
+        <!-- Women's Wear -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80" alt="Women's Wear Collection" />
+          <div class="category-card-body">
+            <h3>Women's Wear</h3>
+            <p>Anarkali kurtis, handloom cotton sarees, printed palazzo sets, salwar suits, and dupattas.</p>
+            <a href="catalogue.html?cat=women" class="btn btn-primary">View Women's Wear</a>
+          </div>
+        </div>
+
+        <!-- Traditional Apparel -->
+        <div class="category-card">
+          <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Traditional Indian Apparel" />
+          <div class="category-card-body">
+            <h3>Traditional Apparel</h3>
+            <p>Banarasi and Kanjeevaram sarees, wedding sherwanis, lehenga cholis, and dhoti kurta sets.</p>
+            <a href="catalogue.html?cat=traditional" class="btn btn-primary">View Traditional Wear</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="section section-grey">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Featured Products</h2>
+        <p>A few of our popular products exported to international buyers</p>
+      </div>
+
+      <div class="product-grid" id="featuredGrid">
+        <!-- Injected by js/main.js -->
+      </div>
+
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="catalogue.html" class="btn btn-outline">View All 18 Products in Catalogue &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose INDKAN -->
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why INDKAN World Wide Exim?</h2>
+        <p>Reliable apparel sourcing with verified Indian manufacturing standards</p>
+      </div>
+
+      <div class="why-us-grid">
+        <div class="why-card">
+          <h4>Quality Checks</h4>
+          <p>Every batch of garments goes through rigorous physical and stitch quality inspections before export packing.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>Bulk Pricing</h4>
+          <p>Direct manufacturer prices in Indian Rupees (₹) with clear tiered discounts for bulk container orders.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>Worldwide Shipping</h4>
+          <p>Efficient sea and air logistics from Kolkata Port (SMP) and Netaji Subhash Chandra Bose Air Cargo Terminal.</p>
+        </div>
+
+        <div class="why-card">
+          <h4>Export Documentation</h4>
+          <p>Complete paperwork provided including IEC, GST invoices, packing lists, Certificate of Origin, and Bill of Lading.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Short About Section -->
+  <section class="section section-grey">
+    <div class="container" style="max-width: 850px; text-align: center;">
+      <h2 style="color: #1b365d; margin-bottom: 15px; font-size: 24px;">About INDKAN World Wide Exim</h2>
+      <p style="color: #555555; font-size: 15px; margin-bottom: 15px;">
+        Headquartered in the modern commercial hub of New Town, Kolkata, INDKAN World Wide Exim Pvt. Ltd. connects international apparel importers with skilled Indian textile clusters. Bengal and eastern India are world-famous for cotton weaving, muslin, and fine silks. We bring these heritage garments to global retail shelves with consistent sizing, quality stitching, and reliable delivery timelines.
+      </p>
+      <a href="about.html" class="btn btn-primary">Read More About Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Premium Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Credentials -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand">
+            <img src="assets/img/indkan-logo.svg" alt="INDKAN Logo" onerror="this.src='assets/img/final_logo.png'" class="footer-logo" />
+            <span class="footer-brand-title">INDKAN World Wide Exim</span>
+          </div>
+          <p class="footer-tagline">
+            Government of India DGFT IEC Approved manufacturer &amp; bulk exporter of premium Indian apparel, cotton, linen, and traditional handlooms.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">&#10003; DGFT IEC Registered</span>
+            <span class="footer-badge">&#10003; Sea Port: Kolkata (INCCU1)</span>
+            <span class="footer-badge">&#10003; Worldwide B2B Shipping</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Garment Catalogue</a></li>
+            <li><a href="enquiry.html">Enquiry Cart</a></li>
+            <li><a href="wholesale.html">Bulk Wholesale RFQ</a></li>
+            <li><a href="export-info.html">Export Procedure &amp; FAQs</a></li>
+            <li><a href="about.html">About INDKAN Exim</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Apparel Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Apparel Categories</h4>
+          <ul class="footer-nav">
+            <li><a href="catalogue.html?cat=men">Men's Wear &amp; Kurtas</a></li>
+            <li><a href="catalogue.html?cat=women">Women's Ethnic &amp; Tunics</a></li>
+            <li><a href="catalogue.html?cat=traditional">Traditional Banarasi &amp; Silk</a></li>
+            <li><a href="wholesale.html">Custom OEM Tailoring</a></li>
+            <li><button type="button" class="footer-install-btn trigger-pwa-install">📲 Install INDKAN App</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate Contact & Connect -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Headquarters</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon">&#128205;</span>
+              <span>Action Area II, New Town, Kolkata, West Bengal - 700161, India</span>
+            </li>
+            <li>
+              <span class="contact-icon">&#128222;</span>
+              <span><a href="tel:+919830076543">+91 98300 76543</a> / <a href="tel:+913340128899">+91 33 4012 8899</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9993;</span>
+              <span><a href="mailto:info@indkanworldwideexim.in">info@indkanworldwideexim.in</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9200;</span>
+              <span>Mon – Sat: 9:30 AM – 6:30 PM IST</span>
+            </li>
+          </ul>
+          <div class="footer-social-wrap">
+            <span class="social-label">Follow INDKAN:</span>
+            <div class="footer-social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+              <a href="https://instagram.com/indkankolkata" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+              <a href="https://youtube.com/@indkanworldwideeximkolkata" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+              <a href="https://wa.me/919830076543" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="wa-link">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright-text">
+            &copy; 2026 <strong>INDKAN World Wide Exim Pvt. Ltd.</strong> All rights reserved. &bull; Registered in Kolkata, India.
+          </p>
+          <p class="developer-text">
+            Crafted &amp; Developed by <strong>Sakshi Jindam</strong> &bull; Web Developer
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/919830076543?text=Hello%20INDKAN%20Exim,%20I%20am%20interested%20in%20apparel%20bulk%20orders." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+  </a>
+
+  <!-- Fixed Mobile Bottom Navigation Bar (Screens < 768px) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav-tab active">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="catalogue.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      <span>Catalogue</span>
+    </a>
+    <a href="enquiry.html" class="nav-tab">
+      <div class="tab-icon-wrap">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="tab-badge" id="bottomEnquiryBadge">0</span>
+      </div>
+      <span>Enquiry</span>
+    </a>
+    <a href="export-info.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span>Info</span>
+    </a>
+    <a href="contact.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="favSphereGlow" cx="42%" cy="36%" r="58%">
+      <stop offset="0%" stop-color="#df3a43" />
+      <stop offset="85%" stop-color="#be262f" />
+      <stop offset="100%" stop-color="#a41d25" />
+    </radialGradient>
+    <linearGradient id="favOrbitGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a4e92" />
+      <stop offset="50%" stop-color="#3b62ae" />
+      <stop offset="100%" stop-color="#4e78ca" />
+    </linearGradient>
+    <linearGradient id="favStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4e78ca" />
+      <stop offset="100%" stop-color="#2a4e92" />
+    </linearGradient>
+  </defs>
+
+  <!-- Centered Emblem in 100x100 viewport -->
+  <g transform="translate(6, 6) scale(1.02)">
+    <!-- Red Planet / Globe -->
+    <circle cx="48" cy="44" r="27" fill="url(#favSphereGlow)" />
+
+    <!-- White separation band -->
+    <path d="M 6 44 C 4 62 20 78 44 76 C 58 75 70 60 76 40 C 79 30 81 18 82 8" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="7" 
+          stroke-linecap="round" />
+
+    <!-- Lower rim reinforcement -->
+    <path d="M 33 66 C 38 69 43 71 48 71 C 57 71 65 67 71 60 C 67 63 60 65 52 65 C 44 65 38 63 33 66 Z" 
+          fill="url(#favSphereGlow)" />
+
+    <!-- Blue Orbital Swoosh -->
+    <path d="M 82 8 
+             C 80 17 76 29 70 41 
+             C 61 57 48 68 34 68 
+             C 18 68 9 58 8 46 
+             C 8 36 13 26 21 19 
+             C 17 23 15 29 15 36 
+             C 15 48 23 57 36 57 
+             C 52 57 66 43 74 27 
+             C 78 19 80 12 82 8 Z" 
+          fill="url(#favOrbitGrad)" />
+
+    <!-- Four-Pointed Star at apex -->
+    <g transform="translate(82, 7)">
+      <polygon points="0,-7 1.8,-1.8 7,0 1.8,1.8 0,7 -1.8,1.8 -7,0 -1.8,-1.8" fill="url(#favStarGrad)" />
+      <circle cx="0" cy="0" r="1.2" fill="#ffffff" />
+    </g>
+  </g>
+</svg>

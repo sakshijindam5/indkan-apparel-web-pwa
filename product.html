@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | INDKAN World Wide Exim Pvt. Ltd.</title>
+  <meta name="description" content="View apparel product details, fabric specifications, sizes, MOQ, and wholesale pricing in Indian Rupees." />
+  <meta name="author" content="Sakshi Jindam" />
+  
+  <!-- PWA & Mobile Settings -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1b365d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="INDKAN" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top contact bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>Location: New Town, Kolkata, West Bengal, India</span>
+        <span>Phone: +91 98300 76543 / +91 33 4012 8899</span>
+        <span>Email: info@indkanworldwideexim.in</span>
+      </div>
+      <div class="top-bar-right">
+        <button type="button" class="topbar-install-btn trigger-pwa-install" id="topbarInstallBtn">📲 Install App</button>
+        <a href="wholesale.html">Request a Wholesale Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with logo and navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" title="INDKAN World Wide Exim Pvt. Ltd.">
+          <img src="assets/img/indkan-logo.svg" alt="INDKAN World Wide Exim Pvt. Ltd. Logo" onerror="this.src='assets/img/final_logo.png'" />
+        </a>
+
+        <!-- Hamburger toggle for mobile -->
+        <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogue.html" class="active">Catalogue</a></li>
+          <li><a href="enquiry.html">Enquiry List <span class="badge" id="navEnquiryBadge">0</span></a></li>
+          <li><a href="wholesale.html">Wholesale &amp; Bulk</a></li>
+          <li><a href="export-info.html">Export Info</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button type="button" class="nav-install-btn trigger-pwa-install" id="navInstallBtn">📲 Install App</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PWA Install Banner -->
+  <div class="pwa-install-banner" id="pwaInstallBanner">
+    <div class="container pwa-banner-content">
+      <div class="pwa-banner-text">
+        <img src="assets/icons/icon-192.png" alt="INDKAN App" class="pwa-banner-icon" />
+        <div>
+          <strong>Install INDKAN Apparel App</strong>
+          <p>Instant access to garment catalogue &amp; offline wholesale enquiry list.</p>
+        </div>
+      </div>
+      <div class="pwa-banner-actions">
+        <button type="button" class="btn btn-primary btn-sm" id="btnInstallPwa">Install App</button>
+        <button type="button" class="btn-dismiss" id="btnDismissPwa" aria-label="Dismiss">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS PWA Install Hint -->
+  <div class="ios-install-hint" id="iosInstallHint" style="display: none;">
+    <span>Tap <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> <strong>Share</strong> then <strong>'Add to Home Screen'</strong> to install app.</span>
+    <button type="button" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+
+  <!-- Breadcrumb navigation -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <a href="catalogue.html">&larr; Back to Catalogue</a> &nbsp;|&nbsp; 
+      <span id="breadcrumbCategory">Apparel</span> &nbsp;&gt;&nbsp; 
+      <span id="breadcrumbName">Product</span>
+    </div>
+  </div>
+
+  <!-- Notification Toast for Adding to Enquiry List -->
+  <div class="toast-notification" id="enquiryToast">
+    <span class="toast-check">&#10003;</span>
+    <span id="toastMsg">Product added to Enquiry List!</span>
+    <a href="enquiry.html" class="toast-link">View List &rarr;</a>
+  </div>
+
+  <!-- Product Detail Section -->
+  <main class="container page-content" id="productDetailContainer">
+    <div class="product-detail-layout">
+      
+      <!-- Left Column: Large Image -->
+      <div class="product-detail-img">
+        <img id="detailImg" src="" alt="Product Image" />
+        <p class="img-caption">
+          Export-grade packaging with individual protective polybags and moisture-resistant cartons.
+        </p>
+      </div>
+
+      <!-- Right Column: Product Information -->
+      <div class="product-detail-info">
+        <span class="category-badge" id="detailCategory">Category</span>
+        <h1 id="detailName">Product Name</h1>
+        <div class="product-detail-price" id="detailPrice">₹0.00</div>
+
+        <p class="product-detail-desc" id="detailDesc">
+          Product description will appear here.
+        </p>
+
+        <!-- Specifications Table -->
+        <table class="product-detail-table">
+          <tbody>
+            <tr>
+              <th>Minimum Order Quantity</th>
+              <td id="detailMoq">100 pieces</td>
+            </tr>
+            <tr>
+              <th>Fabric Composition</th>
+              <td id="detailFabric">Cotton</td>
+            </tr>
+            <tr>
+              <th>Available Sizes</th>
+              <td id="detailSizes">S, M, L, XL, XXL</td>
+            </tr>
+            <tr>
+              <th>Origin &amp; Port</th>
+              <td>New Town, Kolkata, India (Syama Prasad Mookerjee Port / CCU Air)</td>
+            </tr>
+            <tr>
+              <th>Export Payment Terms</th>
+              <td>L/C at sight, T/T wire transfer (Advance / Balance on B/L copy)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Order / Enquiry Action Buttons -->
+        <div class="product-action-box">
+          <div class="qty-selector-group">
+            <label for="detailOrderQty"><strong>Quantity (pieces):</strong></label>
+            <div class="qty-stepper">
+              <button type="button" class="btn-step" id="btnQtyMinus" aria-label="Decrease quantity">&minus;</button>
+              <input type="number" id="detailOrderQty" value="100" min="10" step="10" />
+              <button type="button" class="btn-step" id="btnQtyPlus" aria-label="Increase quantity">&plus;</button>
+            </div>
+          </div>
+
+          <div class="product-btn-group">
+            <!-- Add to Enquiry List Button -->
+            <button type="button" class="btn btn-secondary btn-lg" id="btnAddToEnquiryList">
+              + Add to Enquiry List
+            </button>
+            
+            <!-- Send Direct Enquiry Button -->
+            <a href="#quickEnquiryFormSection" class="btn btn-primary btn-lg" id="btnSendEnquiry">
+              Send Enquiry
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Product Enquiry Form Card -->
+        <div class="card-box" id="quickEnquiryFormSection" style="margin-top: 30px;">
+          <h3>Send Direct Enquiry for this Garment</h3>
+          <p class="form-subtext">Fill in your business details below to receive proforma FOB/CIF pricing directly from our Kolkata export team.</p>
+
+          <div id="quickEnquiryAlert" class="form-alert" style="display: none;"></div>
+
+          <form id="quickEnquiryForm" novalidate>
+            <div class="form-group">
+              <label>Garment Reference</label>
+              <input type="text" id="enquiryProductName" readonly class="form-control" style="background-color: #f4f6f8; font-weight: 600;" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="qName">Your Name <span class="required">*</span></label>
+                <input type="text" id="qName" class="form-control" placeholder="e.g. David Miller" required />
+              </div>
+              <div class="form-group">
+                <label for="qCompany">Company / Retailer Name <span class="required">*</span></label>
+                <input type="text" id="qCompany" class="form-control" placeholder="e.g. EuroStyle Gmbh" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="qCountry">Destination Country <span class="required">*</span></label>
+                <input type="text" id="qCountry" class="form-control" placeholder="e.g. United Kingdom, USA, Germany" required />
+              </div>
+              <div class="form-group">
+                <label for="qEmail">Business Email <span class="required">*</span></label>
+                <input type="email" id="qEmail" class="form-control" placeholder="buyer@company.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="qPhone">Phone / WhatsApp (+Country Code) <span class="required">*</span></label>
+                <input type="tel" id="qPhone" class="form-control" placeholder="+44 7911 123456" required />
+              </div>
+              <div class="form-group">
+                <label for="qQty">Target Quantity (Pieces)</label>
+                <input type="number" id="qQty" class="form-control" value="100" min="10" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="qMsg">Specific Requirements / Custom Labeling Notes</label>
+              <textarea id="qMsg" rows="3" class="form-control" placeholder="Specify your desired delivery timeframe, size breakdown, or private branding requests..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="btnSubmitQuickEnquiry">
+              Submit Product Enquiry &rarr;
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/919830076543?text=Hello%20INDKAN%20Exim,%20I%20have%20an%20enquiry%20regarding%20apparel%20export." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat with INDKAN on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.12c-1.5 0-2.97-.4-4.24-1.16l-.3-.18-3.14.82.84-3.06-.2-.32a8.09 8.09 0 0 1-1.24-4.41c0-4.47 3.64-8.11 8.12-8.11 2.17 0 4.21.85 5.75 2.38 1.53 1.54 2.38 3.58 2.38 5.75 0 4.48-3.65 8.12-8.11 8.12zm4.45-6.09c-.24-.12-1.44-.71-1.66-.79-.22-.09-.39-.12-.55.12-.17.24-.65.79-.8 1.03-.15.24-.3.27-.54.15-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.15-.24-.02-.37.1-.49.11-.11.25-.28.37-.43.12-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.12-.55-1.33-.76-1.83-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.24-.87.85-.87 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.24 3.75.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.44-.59 1.64-1.16.21-.57.21-1.06.15-1.16-.06-.1-.22-.17-.46-.29z"/>
+    </svg>
+  </a>
+
+  <!-- Fixed Mobile Bottom Navigation Bar (Screens < 768px) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="catalogue.html" class="nav-tab active">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      <span>Catalogue</span>
+    </a>
+    <a href="enquiry.html" class="nav-tab">
+      <div class="tab-icon-wrap">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="tab-badge" id="bottomEnquiryBadge">0</span>
+      </div>
+      <span>Enquiry</span>
+    </a>
+    <a href="export-info.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span>Info</span>
+    </a>
+    <a href="contact.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Premium Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Credentials -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand">
+            <img src="assets/img/indkan-logo.svg" alt="INDKAN Logo" onerror="this.src='assets/img/final_logo.png'" class="footer-logo" />
+            <span class="footer-brand-title">INDKAN World Wide Exim</span>
+          </div>
+          <p class="footer-tagline">
+            Government of India DGFT IEC Approved manufacturer &amp; bulk exporter of premium Indian apparel, cotton, linen, and traditional handlooms.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">&#10003; DGFT IEC Registered</span>
+            <span class="footer-badge">&#10003; Sea Port: Kolkata (INCCU1)</span>
+            <span class="footer-badge">&#10003; Worldwide B2B Shipping</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Garment Catalogue</a></li>
+            <li><a href="enquiry.html">Enquiry Cart</a></li>
+            <li><a href="wholesale.html">Bulk Wholesale RFQ</a></li>
+            <li><a href="export-info.html">Export Procedure &amp; FAQs</a></li>
+            <li><a href="about.html">About INDKAN Exim</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Apparel Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Apparel Categories</h4>
+          <ul class="footer-nav">
+            <li><a href="catalogue.html?cat=men">Men's Wear &amp; Kurtas</a></li>
+            <li><a href="catalogue.html?cat=women">Women's Ethnic &amp; Tunics</a></li>
+            <li><a href="catalogue.html?cat=traditional">Traditional Banarasi &amp; Silk</a></li>
+            <li><a href="wholesale.html">Custom OEM Tailoring</a></li>
+            <li><button type="button" class="footer-install-btn trigger-pwa-install">📲 Install INDKAN App</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate Contact & Connect -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Headquarters</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon">&#128205;</span>
+              <span>Action Area II, New Town, Kolkata, West Bengal - 700161, India</span>
+            </li>
+            <li>
+              <span class="contact-icon">&#128222;</span>
+              <span><a href="tel:+919830076543">+91 98300 76543</a> / <a href="tel:+913340128899">+91 33 4012 8899</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9993;</span>
+              <span><a href="mailto:info@indkanworldwideexim.in">info@indkanworldwideexim.in</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9200;</span>
+              <span>Mon – Sat: 9:30 AM – 6:30 PM IST</span>
+            </li>
+          </ul>
+          <div class="footer-social-wrap">
+            <span class="social-label">Follow INDKAN:</span>
+            <div class="footer-social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+              <a href="https://instagram.com/indkankolkata" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+              <a href="https://youtube.com/@indkanworldwideeximkolkata" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+              <a href="https://wa.me/919830076543" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="wa-link">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright-text">
+            &copy; 2026 <strong>INDKAN World Wide Exim Pvt. Ltd.</strong> All rights reserved. &bull; Registered in Kolkata, India.
+          </p>
+          <p class="developer-text">
+            Crafted &amp; Developed by <strong>Sakshi Jindam</strong> &bull; Web Developer
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | INDKAN World Wide Exim Pvt. Ltd.</title>
+  <meta name="description" content="Get in touch with INDKAN World Wide Exim Pvt. Ltd. in New Town, Kolkata, India. Phone, email, address, and Google Maps location." />
+  <meta name="author" content="Sakshi Jindam" />
+  <!-- PWA & Mobile Settings -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1b365d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="INDKAN" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top contact bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>Location: New Town, Kolkata, West Bengal, India</span>
+        <span>Phone: +91 98300 76543 / +91 33 4012 8899</span>
+        <span>Email: info@indkanworldwideexim.in</span>
+      </div>
+      <div class="top-bar-right">
+        <button type="button" class="topbar-install-btn trigger-pwa-install" id="topbarInstallBtn">📲 Install App</button>
+        <a href="wholesale.html">Request a Wholesale Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header with logo and navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="brand-logo" title="INDKAN World Wide Exim Pvt. Ltd.">
+          <img src="assets/img/indkan-logo.svg" alt="INDKAN World Wide Exim Pvt. Ltd. Logo" onerror="this.src='assets/img/final_logo.png'" />
+        </a>
+
+        <!-- Hamburger toggle for mobile -->
+        <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Navigation links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catalogue.html">Catalogue</a></li>
+          <li><a href="enquiry.html">Enquiry List <span class="badge" id="navEnquiryBadge">0</span></a></li>
+          <li><a href="wholesale.html">Wholesale &amp; Bulk</a></li>
+          <li><a href="export-info.html">Export Info</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><button type="button" class="nav-install-btn trigger-pwa-install" id="navInstallBtn">📲 Install App</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PWA Install Banner -->
+  <div class="pwa-install-banner" id="pwaInstallBanner">
+    <div class="container pwa-banner-content">
+      <div class="pwa-banner-text">
+        <img src="assets/icons/icon-192.png" alt="INDKAN App" class="pwa-banner-icon" />
+        <div>
+          <strong>Install INDKAN Apparel App</strong>
+          <p>Instant access to garment catalogue &amp; offline wholesale enquiry list.</p>
+        </div>
+      </div>
+      <div class="pwa-banner-actions">
+        <button type="button" class="btn btn-primary btn-sm" id="btnInstallPwa">Install App</button>
+        <button type="button" class="btn-dismiss" id="btnDismissPwa" aria-label="Dismiss">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- iOS PWA Install Hint -->
+  <div class="ios-install-hint" id="iosInstallHint" style="display: none;">
+    <span>Tap <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> <strong>Share</strong> then <strong>'Add to Home Screen'</strong> to install app.</span>
+    <button type="button" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+
+  <!-- Page banner -->
+  <section class="banner">
+    <div class="container">
+      <h1>Contact Our Kolkata Office</h1>
+      <p>
+        We are located in New Town, Kolkata. Reach out to our export division via phone, email, or WhatsApp, or visit our office for fabric inspections and order discussions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Information & Form -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: start;">
+        
+        <!-- Left: Contact Details -->
+        <div>
+          <h2 style="font-size: 22px; color: #1b365d; margin-bottom: 15px;">Office &amp; Export Desk</h2>
+          <div style="background-color: #f4f6f8; border: 1px solid #e2e5e8; border-radius: 4px; padding: 22px; margin-bottom: 25px;">
+            <p style="margin-bottom: 12px; font-size: 14px;">
+              <strong>Company Name:</strong><br />
+              INDKAN World Wide Exim Pvt. Ltd.
+            </p>
+            <p style="margin-bottom: 12px; font-size: 14px;">
+              <strong>Registered Office Address:</strong><br />
+              Action Area II, New Town, Kolkata, West Bengal - 700161, India
+            </p>
+            <p style="margin-bottom: 12px; font-size: 14px;">
+              <strong>Phone Numbers:</strong><br />
+              Mobile / WhatsApp: <a href="tel:+919830076543">+91 98300 76543</a><br />
+              Landline: <a href="tel:+913340128899">+91 33 4012 8899</a>
+            </p>
+            <p style="margin-bottom: 12px; font-size: 14px;">
+              <strong>Official Email:</strong><br />
+              <a href="mailto:info@indkanworldwideexim.in">info@indkanworldwideexim.in</a>
+            </p>
+            <p style="margin-bottom: 0; font-size: 14px;">
+              <strong>Working Hours:</strong><br />
+              Monday to Saturday: 9:30 AM &ndash; 6:30 PM (IST)
+            </p>
+          </div>
+
+          <h3 style="font-size: 17px; color: #1b365d; margin-bottom: 8px;">Social Channels</h3>
+          <p style="font-size: 13px; color: #666; margin-bottom: 12px;">Follow our production updates and newly launched export collections:</p>
+          <div class="footer-social-links" style="margin-bottom: 20px;">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style="background-color: #1b365d; color: #ffffff;">Facebook</a>
+            <a href="https://instagram.com/indkankolkata" target="_blank" rel="noopener noreferrer" style="background-color: #1b365d; color: #ffffff;">Instagram (@indkankolkata)</a>
+            <a href="https://youtube.com/@indkanworldwideeximkolkata" target="_blank" rel="noopener noreferrer" style="background-color: #1b365d; color: #ffffff;">YouTube (@indkanworldwideeximkolkata)</a>
+          </div>
+        </div>
+
+        <!-- Right: Send a Message Form -->
+        <div class="form-card" style="margin: 0; padding: 25px;">
+          <h2 style="font-size: 20px; color: #1b365d; margin-bottom: 6px;">Send Us a Message</h2>
+          <p style="font-size: 13px; color: #666; margin-bottom: 18px;">
+            Have a question regarding samples, pricing, or shipping? Send a note and we will reply promptly.
+          </p>
+
+          <div id="contactFormAlert" class="form-alert"></div>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="cName">Your Name *</label>
+              <input type="text" id="cName" placeholder="Full Name" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cEmail">Email Address *</label>
+                <input type="email" id="cEmail" placeholder="you@company.com" required />
+              </div>
+              <div class="form-group">
+                <label for="cPhone">Phone / WhatsApp *</label>
+                <input type="tel" id="cPhone" placeholder="+91..." required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cSubject">Subject</label>
+              <input type="text" id="cSubject" placeholder="e.g. Sourcing Cotton Kurtas for UK Retail" />
+            </div>
+
+            <div class="form-group">
+              <label for="cMessage">Message *</label>
+              <textarea id="cMessage" rows="4" placeholder="How can our export team help you?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Google Maps Embed for New Town Kolkata -->
+      <div style="margin-top: 40px;">
+        <h3 style="font-size: 18px; color: #1b365d; margin-bottom: 10px;">Office Location Map (New Town, Kolkata)</h3>
+        <div class="map-box">
+          <iframe
+            title="INDKAN World Wide Exim Location in New Town Kolkata"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14733.916849487903!2d88.46194247596045!3d22.59858547963385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027535b91cb465%3A0x6b6339cc904f4342!2sAction%20Area%20II%2C%20New%20Town%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Credentials -->
+        <div class="footer-col footer-brand-col">
+          <div class="footer-brand">
+            <img src="assets/img/indkan-logo.svg" alt="INDKAN Logo" onerror="this.src='assets/img/final_logo.png'" class="footer-logo" />
+            <span class="footer-brand-title">INDKAN World Wide Exim</span>
+          </div>
+          <p class="footer-tagline">
+            Government of India DGFT IEC Approved manufacturer &amp; bulk exporter of premium Indian apparel, cotton, linen, and traditional handlooms.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">&#10003; DGFT IEC Registered</span>
+            <span class="footer-badge">&#10003; Sea Port: Kolkata (INCCU1)</span>
+            <span class="footer-badge">&#10003; Worldwide B2B Shipping</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Garment Catalogue</a></li>
+            <li><a href="enquiry.html">Enquiry Cart</a></li>
+            <li><a href="wholesale.html">Bulk Wholesale RFQ</a></li>
+            <li><a href="export-info.html">Export Procedure &amp; FAQs</a></li>
+            <li><a href="about.html">About INDKAN Exim</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Apparel Categories -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Apparel Categories</h4>
+          <ul class="footer-nav">
+            <li><a href="catalogue.html?cat=men">Men's Wear &amp; Kurtas</a></li>
+            <li><a href="catalogue.html?cat=women">Women's Ethnic &amp; Tunics</a></li>
+            <li><a href="catalogue.html?cat=traditional">Traditional Banarasi &amp; Silk</a></li>
+            <li><a href="wholesale.html">Custom OEM Tailoring</a></li>
+            <li><button type="button" class="footer-install-btn trigger-pwa-install">📲 Install INDKAN App</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate Contact & Connect -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Headquarters</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="contact-icon">&#128205;</span>
+              <span>Action Area II, New Town, Kolkata, West Bengal - 700161, India</span>
+            </li>
+            <li>
+              <span class="contact-icon">&#128222;</span>
+              <span><a href="tel:+919830076543">+91 98300 76543</a> / <a href="tel:+913340128899">+91 33 4012 8899</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9993;</span>
+              <span><a href="mailto:info@indkanworldwideexim.in">info@indkanworldwideexim.in</a></span>
+            </li>
+            <li>
+              <span class="contact-icon">&#9200;</span>
+              <span>Mon – Sat: 9:30 AM – 6:30 PM IST</span>
+            </li>
+          </ul>
+          <div class="footer-social-wrap">
+            <span class="social-label">Follow INDKAN:</span>
+            <div class="footer-social-links">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a>
+              <a href="https://instagram.com/indkankolkata" target="_blank" rel="noopener noreferrer" title="Instagram">Instagram</a>
+              <a href="https://youtube.com/@indkanworldwideeximkolkata" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+              <a href="https://wa.me/919830076543" target="_blank" rel="noopener noreferrer" title="WhatsApp" class="wa-link">WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-flex">
+          <p class="copyright-text">
+            &copy; 2026 <strong>INDKAN World Wide Exim Pvt. Ltd.</strong> All rights reserved. &bull; Registered in Kolkata, India.
+          </p>
+          <p class="developer-text">
+            Crafted &amp; Developed by <strong>Sakshi Jindam</strong> &bull; Web Developer
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/919830076543?text=Hello%20INDKAN%20Exim,%20I%20want%20to%20get%20in%20touch." class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg>
+  </a>
+
+  <!-- Fixed Mobile Bottom Navigation Bar (Screens < 768px) -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="index.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="catalogue.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7"></rect>
+        <rect x="14" y="3" width="7" height="7"></rect>
+        <rect x="14" y="14" width="7" height="7"></rect>
+        <rect x="3" y="14" width="7" height="7"></rect>
+      </svg>
+      <span>Catalogue</span>
+    </a>
+    <a href="enquiry.html" class="nav-tab">
+      <div class="tab-icon-wrap">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="tab-badge" id="bottomEnquiryBadge">0</span>
+      </div>
+      <span>Enquiry</span>
+    </a>
+    <a href="export-info.html" class="nav-tab">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span>Info</span>
+    </a>
+    <a href="contact.html" class="nav-tab active">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Simple contact form validation
+    const contactForm = document.getElementById("contactForm");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const alertBox = document.getElementById("contactFormAlert");
+        const name = document.getElementById("cName").value.trim();
+        const email = document.getElementById("cEmail").value.trim();
+        const phone = document.getElementById("cPhone").value.trim();
+        const message = document.getElementById("cMessage").value.trim();
+
+        if (!name || !email || !phone || !message) {
+          alertBox.className = "form-alert error";
+          alertBox.textContent = "Please fill in all required fields.";
+          return;
+        }
+
+        alertBox.className = "form-alert success";
+        alertBox.textContent = "Thank you, " + name + "! Your message has been sent to our Kolkata office. We will reply within 24 hours.";
+        contactForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
